@@ -5,6 +5,7 @@
 Vamos começar adicionando um laço ``||input:agitar||``.
 
 ```blocks
+let a =0;
 input.onGesture(Gesture.Shake, function ())
 ```
 
