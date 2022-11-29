@@ -5,7 +5,7 @@
 Vamos começar adicionando um laço ``||input:agitar||``.
 
 ```blocks
-input.onGesture(Gesture.Shake, function ())
+
 ```
 
 

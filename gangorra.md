@@ -5,7 +5,9 @@ datalogger=github:pxt-microbit/tree/master/libs/datalogger
 ## Step 1
 
 Neste projeto vamos construir um programa capaz de armazenar dados e informações sobre a aceleração que submetemos o Micro:bit. Quando ele estiver oscilando na gangorra, observaremos valores altos de aceleração que irão diminuir até que ela chegue no estado de equilíbrio.
+```blocks
 
+```
 ## Step 2
 
 Começaremos o projeto indo até a aba ``||Variables:Variáveis||`` para criar uma variável denominada ``||Variables:Registrando dados||``. Retorne até a mesma aba e adicione um bloco de ``||Variables:definição||`` dentro do laço ``||Basic:no iniciar||``.
