@@ -1,3 +1,2 @@
-basic.forever(function () {
-	
-})
+
+fuzzyLibrary.servo2(fuzzyLibrary.servoPorts.P1, 0)
