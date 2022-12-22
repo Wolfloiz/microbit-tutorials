@@ -15,7 +15,9 @@
         "_locales/pt-BR/README.md",
         "fuzzyLibrary.ts",
         "eletricCar.md",
-        "gangorra.md"
+        "gangorra.md",
+        "light-intensity.md",
+        "maior-menor.md"
     ],
     "testFiles": [
         "test.ts"
