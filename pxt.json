@@ -17,7 +17,9 @@
         "eletricCar.md",
         "gangorra.md",
         "light-intensity.md",
-        "maior-menor.md"
+        "maior-menor.md",
+        "treasure-hunt-1.md",
+        "treasure-hunt-2.md"
     ],
     "testFiles": [
         "test.ts"
