@@ -19,7 +19,8 @@
         "light-intensity.md",
         "maior-menor.md",
         "treasure-hunt-1.md",
-        "treasure-hunt-2.md"
+        "treasure-hunt-2.md",
+        "morse-code.md"
     ],
     "testFiles": [
         "test.ts"
