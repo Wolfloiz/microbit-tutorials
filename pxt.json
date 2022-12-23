@@ -21,7 +21,8 @@
         "treasure-hunt-1.md",
         "treasure-hunt-2.md",
         "morse-code.md",
-        "eletric-car.md"
+        "eletric-car.md",
+        "free-fall.md"
     ],
     "testFiles": [
         "test.ts"
