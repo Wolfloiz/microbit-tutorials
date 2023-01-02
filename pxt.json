@@ -22,7 +22,10 @@
         "treasure-hunt-2.md",
         "morse-code.md",
         "eletric-car.md",
-        "free-fall.md"
+        "free-fall.md",
+        "gear-box.md",
+        "catapulta.md",
+        "pendulo.md"
     ],
     "testFiles": [
         "test.ts"
