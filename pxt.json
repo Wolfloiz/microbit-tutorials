@@ -25,7 +25,9 @@
         "free-fall.md",
         "gear-box.md",
         "catapulta.md",
-        "pendulo.md"
+        "pendulo.md",
+        "swing.md",
+        "guindaste.md"
     ],
     "testFiles": [
         "test.ts"
