@@ -27,7 +27,8 @@
         "catapulta.md",
         "pendulo.md",
         "swing.md",
-        "guindaste.md"
+        "guindaste.md",
+        "treasure-hunt.md"
     ],
     "testFiles": [
         "test.ts"
