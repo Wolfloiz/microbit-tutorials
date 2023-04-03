@@ -29,7 +29,8 @@
         "guindaste.md",
         "treasure-hunt.md",
         "main.ts",
-        "maior-menor-atividade-1.1.md"
+        "maior-menor-atividade-1.1.md",
+        "maior-ou-menor-atividade1.2.md"
     ],
     "testFiles": [
         "test.ts"
