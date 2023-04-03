@@ -8,7 +8,6 @@
     },
     "files": [
         "main.blocks",
-        "main.ts",
         "README.md",
         "pedra-papel-tesoura.md",
         "_locales/pt-BR/pedra-papel-tesoura.md",
@@ -28,7 +27,9 @@
         "pendulo.md",
         "swing.md",
         "guindaste.md",
-        "treasure-hunt.md"
+        "treasure-hunt.md",
+        "main.ts",
+        "maior-menor-atividade-1.1.md"
     ],
     "testFiles": [
         "test.ts"
