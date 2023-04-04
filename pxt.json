@@ -52,7 +52,8 @@
         "nervo-teste-atividade-3.4.md",
         "nervo-teste-atividade-3.5.md",
         "pacman-atividade-4.1.md",
-        "pacman-atividade-4.2.md"
+        "pacman-atividade-4.2.md",
+        "pacman-atividade-4.3.md"
     ],
     "testFiles": [
         "test.ts"
