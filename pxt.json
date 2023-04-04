@@ -46,7 +46,8 @@
         "_locales/pt-BR/maior-menor-atividade-1.6.md",
         "pedra-papel-tesoura-2.6.md",
         "pedra-papel-tesoura-2.7.md",
-        "nervo-teste-atividade-3.1.md"
+        "nervo-teste-atividade-3.1.md",
+        "nervo-teste-atividade-3.2.md"
     ],
     "testFiles": [
         "test.ts"
