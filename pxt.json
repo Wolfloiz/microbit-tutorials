@@ -41,7 +41,8 @@
         "pedra-papel-tesoura-2.2.md",
         "pedra-papel-tesoura-2.3.md",
         "custom.ts",
-        "pedra-papel-tesoura-2.4.md"
+        "pedra-papel-tesoura-2.4.md",
+        "_locales/pt-BR/maior-menor-atividade-1.6.md"
     ],
     "testFiles": [
         "test.ts"
