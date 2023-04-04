@@ -56,7 +56,8 @@
         "pacman-atividade-4.3.md",
         "pacman-atividade-4.4.md",
         "pacman-atividade-4.5.md",
-        "acerte-o-ponto-atividade-5.1.md"
+        "acerte-o-ponto-atividade-5.1.md",
+        "acerte-o-ponto-atividade-5.2.md"
     ],
     "testFiles": [
         "test.ts"
