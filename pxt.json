@@ -62,7 +62,8 @@
         "acerte-o-ponto-atividade-5.4.md",
         "jogo-do-reflexo-atividade-6.1.md",
         "jogo-do-reflexo-atividade-6.2.md",
-        "jogo-do-reflexo-atividade-6.3.md"
+        "jogo-do-reflexo-atividade-6.3.md",
+        "jogo-do-reflexo-atividade-6.4.md"
     ],
     "testFiles": [
         "test.ts"
