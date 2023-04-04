@@ -31,7 +31,8 @@
         "main.ts",
         "maior-menor-atividade-1.1.md",
         "maior-ou-menor-atividade1.2.md",
-        "maior-menor-atividade-1.3.md"
+        "maior-menor-atividade-1.3.md",
+        "maior-menor-atividade-1.4.md"
     ],
     "testFiles": [
         "test.ts"
