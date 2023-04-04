@@ -75,7 +75,8 @@
         "codigo-morse-atividade-8.2.md",
         "codigo-morse-atividade-8.3.md",
         "codigo-morse-atividade-8.4.md",
-        "codigo-morse-atividade-8.5.md"
+        "codigo-morse-atividade-8.5.md",
+        "codigo-morse-atividade-8.6.md"
     ],
     "testFiles": [
         "test.ts"
