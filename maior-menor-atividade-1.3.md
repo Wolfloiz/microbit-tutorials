@@ -1,5 +1,6 @@
 
 
+
 ## Step 1
 Vamos, antes de tudo, acessar a aba ``||Variables:variável||``,
  clicar em Fazer uma variável e nomeá-la como
