@@ -36,7 +36,8 @@
         "maior-menor-atividade-1.6.md",
         "maior-menor-atividade-1.7.md",
         "maior-menor-atividade-1.2.md",
-        "maior-menor-atividade-1.8.md"
+        "maior-menor-atividade-1.8.md",
+        "pedra-papel-tesoura-2.1.md"
     ],
     "testFiles": [
         "test.ts"
