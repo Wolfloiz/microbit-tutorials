@@ -71,7 +71,8 @@
         "caca-ao-tesouro-atividade-7.2.md",
         "caca-ao-tesouro-atividade-7.3.md",
         "caca-ao-tesouro-atividade-7.4.md",
-        "codigo-morse-atividade-8.1.md"
+        "codigo-morse-atividade-8.1.md",
+        "codigo-morse-atividade-8.2.md"
     ],
     "testFiles": [
         "test.ts"
