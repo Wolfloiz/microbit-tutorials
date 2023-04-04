@@ -1,10 +1,9 @@
-
-
+# 001.03- randint
 
 ## Step 1
 Vamos, antes de tudo, acessar a aba ``||Variables:variável||``,
  clicar em Fazer uma variável e nomeá-la como
-  ``||Variables:Número||``. Em seguida inserimos o bloco 
+  ``||Variables:Número||``. Em seguida, inserimos o bloco 
 ``||Variables:definir variável para||`` dentro do laço ``||basic:no iniciar||``.
 Uma variável serve para armazenarmos informações que serão usadas em outros lugares sem que
 precisemos digitar seu valor repetidamente.
@@ -15,7 +14,7 @@ let Número = 0
 
 ## Step 2
 
-Agora aprenderemos usar o bloco ``||Math:escolher aleatório||``, que se encontra
+Agora aprenderemos a usar o bloco ``||Math:escolher aleatório||``, que se encontra
  na aba ``||Math:Matemática||``. Essa função gera
  um número inteiro aleatório entre os dois valores que você escolher. Devemos inserir 
 este comando ``||Math:escolher aleatório||`` dentro do bloco 
