@@ -68,7 +68,8 @@
         "jogo-do-reflexo-atividade-6.6.md",
         "_locales/pt-BR/jogo-do-reflexo-atividade-6.6.md",
         "caca-ao-tesouro-atividade-7.1.md",
-        "caca-ao-tesouro-atividade-7.2.md"
+        "caca-ao-tesouro-atividade-7.2.md",
+        "caca-ao-tesouro-atividade-7.3.md"
     ],
     "testFiles": [
         "test.ts"
