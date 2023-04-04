@@ -1,4 +1,5 @@
-# 001.03- randint
+
+
 
 ## Step 1
 Vamos, antes de tudo, acessar a aba ``||Variables:variável||``,
