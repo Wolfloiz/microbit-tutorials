@@ -48,7 +48,8 @@
         "pedra-papel-tesoura-2.7.md",
         "nervo-teste-atividade-3.1.md",
         "nervo-teste-atividade-3.2.md",
-        "nervo-teste-atividade-3.3.md"
+        "nervo-teste-atividade-3.3.md",
+        "nervo-teste-atividade-3.4.md"
     ],
     "testFiles": [
         "test.ts"
