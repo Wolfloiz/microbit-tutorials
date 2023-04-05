@@ -95,9 +95,9 @@ radio.setGroup(1)
 No primeiro laço ``||logic:se-então||``, vamos adicionar a condição 
 ``||logic:Sinal ≤ -80||``, que seria um sinal fraco, pois o Tesouro estaria longe. No 
 segundo, vamos precisar do operador ``||logic:E||``, também presente na aba ``||logic:Lógica||``, 
-para testarmos duas condições simultâneas. Vamos avaliar se ``||logic:Sinal ≤ -50 e Sinal ≥ -80||``, 
+para testarmos duas condições simultâneas. Vamos avaliar se ``||logic:Sinal ≤ -50 e Sinal < -80||``, 
 o que seria uma distância média. Por fim, no último laço, usamos a condição 
-``||logic:Sinal ≥ -50||``, que seria um sinal forte, indicando que o Tesouro está próximo.
+``||logic:Sinal > -50||``, que seria um sinal forte, indicando que o Tesouro está próximo.
 
 
 ```blocks
@@ -106,10 +106,10 @@ radio.onReceivedNumber(function (receivedNumber) {
     if (Sinal <= -80) {
     	
     }
-    if (Sinal <= -50 && Sinal >= -80) {
+    if (Sinal <= -50 && Sinal > -80) {
     	
     }
-    if (Sinal >= -50) {
+    if (Sinal > -50) {
     	
     }
 })
@@ -131,10 +131,10 @@ radio.onReceivedNumber(function (receivedNumber) {
     if (Sinal <= -80) {
         basic.showIcon(IconNames.SmallDiamond)
     }
-    if (Sinal <= -50 && Sinal >= -80) {
+    if (Sinal <= -50 && Sinal > -80) {
         basic.showIcon(IconNames.Diamond)
     }
-    if (Sinal >= -50) {
+    if (Sinal > -50) {
         basic.showIcon(IconNames.Square)
     }
 })
@@ -148,8 +148,3 @@ radio.setGroup(1)
 Pronto, agora que temos o Tesouro e o Caçador, está na hora de brincar! Peça alguém para 
 esconder o Tesouro para que você possa caçá-lo!! Ou esconda o Tesouro e veja se seus 
 amigos conseguem encontrá-lo!!!
-
-
-
-
-
