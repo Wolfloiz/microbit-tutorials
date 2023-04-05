@@ -3,15 +3,16 @@
 
 ## Step 1
 
-Vamos aprender agora a fazer um jogo de caça ao tesouro usando dois micro:bits, um deles 
-será o tesouro e o outro será o caçador. Primeiro, vamos programar o Tesouro.
+Vamos aprender a fazer um jogo de caça ao tesouro usando dois micro:bits, um deles 
+será o escondido e enviará sinais de rádio para outro será o caçador, funcionando como um radar. 
+Começaremos pela programação do Micro:bit Tesouro.
 
 ## Step 2
 
-Primeiramente, vamos pegar o bloco ``||radio:definir grupo do rádio 1||``, na aba 
-``||radio:Rádio||``, e colocá-lo dentro do bloco ``||basic:no iniciar||``. Esse bloco 
-serve para que todos os micro:bits dentro desse mesmo grupo estejam conectados uns com 
-os outros.
+Primeiramente, vamos até a aba ``||radio:Rádio||``, selecionamos o bloco ``||radio:definir grupo do rádio 1||`` 
+e o colocamos dentro do laço ``||basic:no iniciar||``. Esse comando
+serve para determinar que todos os Micro:bits dentro desse mesmo grupo estejam conectados entre si. 
+Portanto, certifique-se de que o grupo do seu Micro:bit seja diferente dos outros grupos da sua sala de aula.
 
 ```blocks
 radio.setGroup(1)
@@ -20,8 +21,8 @@ radio.setGroup(1)
 ## Step 3
 
 Em seguida, vamos adicionar o bloco ``||radio:conjunto de radio transmite o número serial verdadeiro||``,
- que pode ser achado na aba 
-``||radio:Rádio->mais||``. Vamos colocar esse bloco logo abaixo do ``||radio:definir grupo do rádio 1||``.
+ localizado na aba 
+``||radio:Rádio->mais||``. Ele deve ser inserido logo abaixo do ``||radio:definir grupo do rádio 1||``.
 
 ```blocks
 radio.setGroup(1)
@@ -30,12 +31,12 @@ radio.setTransmitSerialNumber(true)
 
 ## Step 4
 
-Vamos agora determinar a força com que o micro:bit irá transmitir informações. Isso irá 
-determinar a distância da comunicação. Devemos escolher esse número de acordo com o tamanho 
+Agora, vamos determinar a força com que o micro:bit irá transmitir informações. Isso
+determina a distância da comunicação. Devemos escolher esse número de acordo com o tamanho 
 do lugar escolhido para esconder/procurar o tesouro. Vamos adicionar o bloco 
 ``||radio:conjunto de rádio transmite energia 6||`` que se encontra na 
-aba ``||radio:Rádio->mais||``, e colocá-lo no bloco ``||basic:no iniciar||``. Pronto, 
-agora a parte da comunicação do micro:bit que será o tesouro está feita. 
+aba ``||radio:Rádio->mais||``, e colocá-lo no laço ``||basic:no iniciar||``. Feito isso, 
+a parte da comunicação do Micro:bit Tesouro está finalizada. 
 
 
 ```blocks
@@ -46,10 +47,10 @@ radio.setTransmitPower(6)
 
 ## Step 5
 
-Vamos enviar um número qualquer para o micro:bit caçador de forma que os micro:bits
- comuniquem constantemente. 
-Temos então que adicionar o bloco ``||radio:rádio envia número 0||`` localizado na aba 
-``||radio:Rádio||``, e colocá-lo dentro de ``||basic:sempre||``.
+Vamos enviar um número qualquer para o outro Micro:bit Caçador para que os Micro:bits 
+se comuniquem constantemente. 
+Então, adicionamos o bloco ``||radio:rádio envia número 0||`` localizado na aba 
+``||radio:Rádio||``, e o inserimos dentro do laço ``||basic:sempre||``.
 
 
 ```blocks
@@ -64,11 +65,4 @@ basic.forever(function () {
 
 ## Step 6
 
-Agora que configuramos o micro:bit tesouro, falta configurar o caçador. Vamos lá!
-
-
-
-
-
-
-
+Agora que configuramos o Micro:bit Tesouro, ainda falta programar o Caçador. Então, vamos lá!
