@@ -10,26 +10,15 @@ Começaremos pela programação do Micro:bit Tesouro.
 ## Step 2
 
 Primeiramente, vamos até a aba ``||radio:Rádio||``, selecionamos o bloco ``||radio:definir grupo do rádio 1||`` 
-e o colocamos dentro do laço ``||basic:no iniciar||``. Esse comando
-serve para determinar que todos os Micro:bits dentro desse mesmo grupo estejam conectados entre si. 
+e o colocamos dentro do laço ``||basic:no iniciar||``. Altere o número do grupo de **1** para **255**, ou outro 
+número próximo deste valor. Esse comando serve para determinar que todos os Micro:bits dentro desse mesmo grupo estejam conectados entre si. 
 Portanto, certifique-se de que o grupo do seu Micro:bit seja diferente dos outros grupos da sua sala de aula.
 
 ```blocks
-radio.setGroup(1)
+radio.setGroup(255)
 ```
 
 ## Step 3
-
-Em seguida, vamos adicionar o bloco ``||radio:conjunto de radio transmite o número serial verdadeiro||``,
- localizado na aba 
-``||radio:Rádio->mais||``. Ele deve ser inserido logo abaixo do ``||radio:definir grupo do rádio 1||``.
-
-```blocks
-radio.setGroup(1)
-radio.setTransmitSerialNumber(true)
-```
-
-## Step 4
 
 Agora, vamos determinar a força com que o micro:bit irá transmitir informações. Isso
 determina a distância da comunicação. Devemos escolher esse número de acordo com o tamanho 
@@ -40,12 +29,11 @@ a parte da comunicação do Micro:bit Tesouro está finalizada.
 
 
 ```blocks
-radio.setGroup(1)
-radio.setTransmitSerialNumber(true)
+radio.setGroup(255)
 radio.setTransmitPower(6)
 ```
 
-## Step 5
+## Step 4
 
 Vamos enviar um número qualquer para o outro Micro:bit Caçador para que os Micro:bits 
 se comuniquem constantemente. 
@@ -54,8 +42,7 @@ Então, adicionamos o bloco ``||radio:rádio envia número 0||`` localizado na a
 
 
 ```blocks
-radio.setGroup(1)
-radio.setTransmitSerialNumber(true)
+radio.setGroup(255)
 radio.setTransmitPower(6)
 basic.forever(function () {
     radio.sendNumber(0)
