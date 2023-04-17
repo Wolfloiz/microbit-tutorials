@@ -1,3 +1,4 @@
+
 ```template
 let aleatório = randint(1, 3)
 if (aleatório == 1) {
@@ -29,8 +30,8 @@ basic.showLeds(`
 
 ## Step 1
 
-Com base no último programa que fizemos, vamos agora colocar um bloco para 
-jogar novamente, sem ter que ligar o micro:bit novamente. Adicione o bloco 
+A partir do último programa que fizemos, vamos criar uma forma de sortear 
+um novo ícone sem precisarmos reiniciar o Micro:bit. Para isso, adicione o laço
 ``||input:agitar||``, que pode ser encontrado na aba ``||input:input||``.
 
 ```blocks
@@ -68,9 +69,9 @@ basic.showLeds(`
 
 ## Step 2
 
-Agora iremos mover todos os blocos que estão dentro do bloco ``||basic:no iniciar||``
- para o bloco ``||input:agitar||``. Para facilitar, pode apenas arrastar o bloco 
- ``||variables:definir aleatório como||``, e todos os outros blocos serão movidos também.
+Agora, mova todos os blocos que estão dentro do laço ``||basic:no iniciar||``
+ para o laço``||input:agitar||``. Para facilitar, apenas arraste o primeiro bloco 
+ ``||variables:definir aleatório como||``, e todos os outros comandos serão movidos juntos.
 
 
 ```blocks
@@ -109,5 +110,5 @@ basic.showLeds(`
 
 ## Step 3
 Pronto! Agora temos um jogo de Pedra, Papel ou Tesoura. Basta sacudir o 
-micro:bit para que ele escolha Pedra, Papel ou Tesoura. Tente ganhar de seu 
-micro:bit, ou jogo com seu micr:bit contra outra pessoa.
+Micro:bit para que ele escolha uma alternativa. Tente ganhar de seu 
+próprio Micro:bit, ou jogue contra outra pessoa.
