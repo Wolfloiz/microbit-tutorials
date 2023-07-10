@@ -2,7 +2,7 @@
 
 ## Step 1
 
-Precisamos indicar ao jogador que o jogo começou! Para isso, vamos adicionar o bloco ``||basic:mostrar string||`` que exibirá uma palavra na matriz de LEDs.
+Testando Precisamos indicar ao jogador que o jogo começou! Para isso, vamos adicionar o bloco ``||basic:mostrar string||`` que exibirá uma palavra na matriz de LEDs.
 ``||basic:No iniciar||``, mostraremos a mensagem **"VAI!"**, que deve ser digitada dentro do bloco ``||basic:mostrar string||``.
 
 ```blocks
