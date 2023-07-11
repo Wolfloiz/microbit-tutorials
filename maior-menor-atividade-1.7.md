@@ -1,4 +1,3 @@
-
 ```template
 input.onButtonPressed(Button.A, function () {
     if (Próximo_Número < Número) {
@@ -44,12 +43,12 @@ basic.showNumber(Número)
 
 ## Step 1
 
-Precisamos indicar ao jogador que o jogo começou! Para isso, vamos 
-adicionar o bloco ``||basic:mostrar string||`` que exibirá uma 
+Precisamos indicar ao jogador que o jogo começou! Para isso, vamos
+adicionar o bloco `||basic:mostrar string||` que exibirá uma
 palavra na matriz de LEDs.
-``||basic:No iniciar||``, 
-mostraremos a mensagem **"VAI!"**, que deve ser digitada dentro do 
-bloco ``||basic:mostrar string||``.
+`||basic:No iniciar||`,
+mostraremos a mensagem **"VAI!"**, que deve ser digitada dentro do
+bloco `||basic:mostrar string||`.
 
 ```blocks
 basic.showString("VAI!")
@@ -59,16 +58,14 @@ let Próximo_Número = randint(0, 100)
 basic.showNumber(Número)
 ```
 
-
-
 ## Step 2
 
 Vamos agora adicionar a opção de reiniciar o jogo ao apertar os botões A e B
- ao mesmo tempo. 
+ao mesmo tempo.
 Os passos que devem ser executados são exatamente
- iguais àqueles que definimos no nosso laço ``||Basic:no iniciar||``.
-  Então, podemos duplicá-los e inseri-los dentro de um laço
-   ``||Input: no botão A+B pressionado||``.
+iguais àqueles que definimos no nosso laço `||Basic:no iniciar||`.
+Então, podemos duplicá-los e inseri-los dentro de um laço
+`||Input: no botão A+B pressionado||`.
 
 ```blocks
 input.onButtonPressed(Button.AB, function () {
