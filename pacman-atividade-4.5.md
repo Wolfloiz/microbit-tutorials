@@ -1,34 +1,29 @@
-
-
-
 ```template
 let pacman = game.createSprite(2, 2)
 basic.forever(function () {
     basic.pause(100)
     if (input.acceleration(Dimension.X) < 0) {
-    pacman.change(LedSpriteProperty.X, -1)	    	
+    pacman.change(LedSpriteProperty.X, -1)
     }
     if (input.acceleration(Dimension.X) > 0) {
-     pacman.change(LedSpriteProperty.X, 1)	   	
+     pacman.change(LedSpriteProperty.X, 1)
     }
     if (input.acceleration(Dimension.Y) < 0) {
-    pacman.change(LedSpriteProperty.Y, -1)	    	
+    pacman.change(LedSpriteProperty.Y, -1)
     }
     if (input.acceleration(Dimension.Y) > 0) {
-     pacman.change(LedSpriteProperty.Y, 1)	   	
+     pacman.change(LedSpriteProperty.Y, 1)
     }
 })
 ```
 
-
 ## Step 1
 
-Já temos o ``||variables: pacman||`` criado, e já podemos movê-lo. Vamos agora 
-criar a moeda que o ``||variables: pacman||`` deve pegar de forma a fazer pontos. 
-Para isso vamos criar uma variável chamada ``||variables: moeda||`` na aba 
-``||variables: Variáveis||``, e vamos copiar o bloco ``||variables: definir pacman para||`` e 
-colocar ele logo abaixo do original, trocando a variável ``||variables: pacman||`` pela 
-variável ``||variables: moeda||``.
+Como já temos o `||variables: pacman||` criado e já é possível movimentá-lo, vamos apenas
+criar a moeda que deve ser coletada. Para isso, crie uma variável chamada `||variables: moeda||` na aba
+`||variables: Variáveis||`. Duplique o bloco `||variables: definir pacman para||`, altere a variável de
+`||variables: pacman||` para `||variables: moeda||`, e o posicione abaixo do original,
+ainda dentro do laço `||basic: no iniciar||`.
 
 ```blocks
 let pacman = game.createSprite(2, 2)
@@ -36,27 +31,25 @@ let moeda = game.createSprite(2, 2)
 basic.forever(function () {
     basic.pause(100)
     if (input.acceleration(Dimension.X) < 0) {
-    pacman.change(LedSpriteProperty.X, -1)	    	
+    pacman.change(LedSpriteProperty.X, -1)
     }
     if (input.acceleration(Dimension.X) > 0) {
-     pacman.change(LedSpriteProperty.X, 1)	   	
+     pacman.change(LedSpriteProperty.X, 1)
     }
     if (input.acceleration(Dimension.X) < 0) {
-    pacman.change(LedSpriteProperty.X, -1)	    	
+    pacman.change(LedSpriteProperty.X, -1)
     }
     if (input.acceleration(Dimension.X) > 0) {
-     pacman.change(LedSpriteProperty.X, 1)	   	
+     pacman.change(LedSpriteProperty.X, 1)
     }
 })
 ```
 
-
 ## Step 2
 
-Agora vamos na aba ``||Math: matemática||`` e pagar o bloco ``||Math: escolher aleatório entre||`` e 
-mudar os valores para 0 e 4. Vamos então colocar dois desses blocos dentro de 
-``||variables: definir moeda para||``, para fazer a moeda começar em um lugar 
-aleatório.
+Em seguida, vá até a aba `||Math: matemática||`, selecione o bloco `||Math: escolher aleatório entre||` e
+altere os valores para **0** e **4**. Então, adicione dois blocos como este dentro dos campos das coordenadas de de
+`||variables: definir moeda para||`, para fazer a moeda apareça em uma posição aleatória ao iniciar.
 
 ```blocks
 let pacman = game.createSprite(2, 2)
@@ -64,62 +57,54 @@ let moeda = game.createSprite(randint(0, 4), randint(0, 4))
 basic.forever(function () {
     basic.pause(100)
     if (input.acceleration(Dimension.X) < 0) {
-    pacman.change(LedSpriteProperty.X, -1)	    	
+    pacman.change(LedSpriteProperty.X, -1)
     }
     if (input.acceleration(Dimension.X) > 0) {
-     pacman.change(LedSpriteProperty.X, 1)	   	
+     pacman.change(LedSpriteProperty.X, 1)
     }
     if (input.acceleration(Dimension.Y) < 0) {
-    pacman.change(LedSpriteProperty.Y, -1)	    	
+    pacman.change(LedSpriteProperty.Y, -1)
     }
     if (input.acceleration(Dimension.Y) > 0) {
-     pacman.change(LedSpriteProperty.Y, 1)	   	
+     pacman.change(LedSpriteProperty.Y, 1)
     }
 })
 ```
+
 ## Step 3
 
-Como a parte de mover o ``||variables: pacman||`` já está feita, resta apenas 
-fazer que, quando o ``||variables: pacman||`` tocar a ``||variables: moeda||``, 
-a moeda desapareça e uma nova apareça em outro lugar. Para isso usaremos o bloco 
-``||logic: se verdadeiro então||`` que se encontra na aba ``||logic: Lógica||``, e o 
-bloco ``||game: is ... touching ...||`` na aba ``||game: Jogo||``.
-
+Como o código para mover o `||variables: pacman||` já está pronto, resta apenas
+fazer a moeda desaparecer e uma nova aparecer em outro lugar,
+quando o `||variables: pacman||` tocar a `||variables: moeda||`.
+Para isso, adicione mais um laço `||logic: se verdadeiro então||`, que se encontra na aba `||logic: Lógica||`, dentro do laço `||basic: sempre||`.
 
 ```blocks
+let pacman = game.createSprite(2, 2)
+let moeda = game.createSprite(randint(0, 4), randint(0, 4))
 basic.forever(function () {
-    let sprite: game.LedSprite = null
-    if (sprite.isTouching()) {
-    	
+    basic.pause(100)
+    if (input.acceleration(Dimension.X) < 0) {
+        pacman.change(LedSpriteProperty.X, -1)
+    }
+    if (input.acceleration(Dimension.X) > 0) {
+        pacman.change(LedSpriteProperty.X, 1)
+    }
+    if (input.acceleration(Dimension.Y) < 0) {
+        pacman.change(LedSpriteProperty.Y, -1)
+    }
+    if (input.acceleration(Dimension.Y) > 0) {
+        pacman.change(LedSpriteProperty.Y, 1)
+    }
+    if (true) {
+
     }
 })
 ```
 
 ## Step 4
 
-Vamos então colocar as variáveis ``||variables: pacman||`` e ``||variables: moeda||`` 
-no bloco ``||game: is ... touching ...||``, em qualquer ordem.
-
-
-```blocks
-basic.forever(function () {
-    let pacman: game.LedSprite = null
-    let moeda: game.LedSprite = null
-    if (pacman.isTouching(moeda)) {
-    	
-    }
-})
-```
-
-## Step 5
-
-Vamos adicionar o bloco ``||game: delete sprite||`` dentro do bloco ``||logic: se||`` 
-e adicionar a variável ``||variables: moeda||``, para deletarmos a moeda. 
-Por fim, vamos copiar o bloco 
-``||variables: definir moeda para||``, que se encontra no 
-bloco ``||basic: no iniciar||`` e colocar dentro do ``||logic: se||``, 
-para criarmos uma nova moeda em um lugar aleatório.
-
+Em seguida, vá até a aba `||game: Jogo||` e insira o bloco triangular `||game: is ... touching ...||` no campo **verdadeiro** do laço `||logic: Se verdadeiro então||`.
+Altere os campos redondos deste bloco para `||variables: pacman||` e `||variables: moeda||`.
 
 ```blocks
 let pacman = game.createSprite(2, 2)
@@ -127,30 +112,57 @@ let moeda = game.createSprite(randint(0, 4), randint(0, 4))
 basic.forever(function () {
     basic.pause(100)
     if (input.acceleration(Dimension.X) < 0) {
-    pacman.change(LedSpriteProperty.X, -1)	    	
+        pacman.change(LedSpriteProperty.X, -1)
     }
     if (input.acceleration(Dimension.X) > 0) {
-     pacman.change(LedSpriteProperty.X, 1)	   	
+        pacman.change(LedSpriteProperty.X, 1)
     }
     if (input.acceleration(Dimension.Y) < 0) {
-    pacman.change(LedSpriteProperty.Y, -1)	    	
+        pacman.change(LedSpriteProperty.Y, -1)
     }
     if (input.acceleration(Dimension.Y) > 0) {
-     pacman.change(LedSpriteProperty.Y, 1)	   	
+        pacman.change(LedSpriteProperty.Y, 1)
     }
-})
-basic.forever(function () {
-    let sprite: game.LedSprite = null
-    let pacman: game.LedSprite = null
-    let moeda: game.LedSprite = null
     if (pacman.isTouching(moeda)) {
-    	 sprite.delete()
-         let moeda = game.createSprite(randint(0, 4), randint(0, 4))
+
     }
 })
 ```
 
+## Step 5
+
+Agora, dentro do laço `||logic: Se verdadeiro então||`, adicione o bloco `||game: delete sprite||`, presente na aba `||game:Jogo||`.
+Altere o campo para a variável `||variables: moeda||`, para deletar a moeda.
+Por fim, copie o bloco `||variables: definir moeda para||`, que se encontra no
+laço `||basic: no iniciar||` e posicione o novo dentro do `||logic: Se verdadeiro então||`,
+para criar uma nova moeda em uma posição aleatória.
+
+```blocks
+let pacman = game.createSprite(2, 2)
+let moeda = game.createSprite(randint(0, 4), randint(0, 4))
+basic.forever(function () {
+    basic.pause(100)
+    if (input.acceleration(Dimension.X) < 0) {
+        pacman.change(LedSpriteProperty.X, -1)
+    }
+    if (input.acceleration(Dimension.X) > 0) {
+        pacman.change(LedSpriteProperty.X, 1)
+    }
+    if (input.acceleration(Dimension.Y) < 0) {
+        pacman.change(LedSpriteProperty.Y, -1)
+    }
+    if (input.acceleration(Dimension.Y) > 0) {
+        pacman.change(LedSpriteProperty.Y, 1)
+    }
+    if (pacman.isTouching(moeda)) {
+        moeda.delete()
+        moeda = game.createSprite(randint(0, 4), randint(0, 4))
+    }
+})
+
+```
+
 ## Step 6
 
-Pronto, já podemos carregar o código para o micro:bit. Se quiser experimentar, 
-pode tentar variar o tempo da pausa, ou tentar adicionar uma pontuação ao jogo.
+Pronto! Já podemos carregar o programa para o Micro:bit. Se quiser experimentar com o código,
+tente variar o tempo da pausa para observar a velocidade do Pac-Man se alterando.

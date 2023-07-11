@@ -1,8 +1,5 @@
-
-
-
 ```template
-radio.setGroup(1)
+radio.setGroup(255)
 radio.setTransmitPower(7)
 input.onButtonPressed(Button.A, function () {
     basic.showLeds(`
@@ -43,82 +40,75 @@ input.onButtonPressed(Button.B, function () {
 
 ```
 
-
-
-
-
 ## Step 1
 
-O que fizemos até então permite que um dos micro:bits envie o Código Morse e o outro 
-receba. Vamos agora fazer algo diferente, para que os dois micro:bits possam enviar e 
-receber.
+Os programas que fizemos até então permitem que um dos micro:bits envie o Código Morse e o outro
+receba. Agora, vamos complementar nossos códigos para que os dois micro:bits possam enviar e
+receber mensagens em Código Morse.
 
 ## Step 2
 
-Estamos partindo do código que fizemos antes do micro:bit que apenas envia o código. 
-Devemos então acrescentar a parte que faz com que o micro:bit receba informação, 
-e mostre o símbolo na tela de acordo com a informação recebida.
-
+Estamos partindo do código que fizemos anteriormente para o micro:bit que apenas envia as mensagens.
+Por isso, devemos acrescentar a parte que faz com que o micro:bit receba informação  
+e mostre o símbolo na tela de acordo com o que foi recebido.
 
 ## Step 3
 
-Vamos adicionar o bloco ``||radio:ao receber rádio receivedNumber||``,
- que pode ser achado na aba 
-``||radio:Rádio||``.
+Em seguida, vamos adicionar o laço `||radio:ao receber rádio receivedNumber||`,
+que pode ser encontrado na aba `||radio:Rádio||`.
+Esse bloco executa tudo que está dentro dele quando recebe um número de outro Micro:bit.
 
 ```blocks
 radio.onReceivedNumber(function (receivedNumber) {
-	
+
 })
 ```
 
 ## Step 4
 
-Agora, dentro do bloco ``||radio:ao receber rádio receivedNumber||`` vamos adicionar 
-o laço condicional ``||logic:se-então-senão||``, que está na aba 
-``||logic:Lógica||``. Vamos então clicar no símbolo ``||logic:+||`` na extremidade 
-inferior esquerda do bloco ``||logic:se-então-senão||`` para adicionar mais uma condição.
-
+Feito isso, dentro do laço `||radio:ao receber rádio receivedNumber||`, vamos adicionar
+o laço condicional `||logic:se-então-senão||`, que está na aba
+`||logic:Lógica||`. Em seguida, devemos clicar no símbolo `||logic:+||` no canto
+inferior na esquerda do bloco `||logic:se-então-senão||` para adicionar mais uma condição.
 
 ```blocks
 radio.onReceivedNumber(function (receivedNumber) {
     if (true) {
-    	
+
     } else if (false) {
-    	
+
     } else {
-    	
+
     }
 })
 ```
 
 ## Step 5
 
-Vamos então adicionar as condições lógicas ao laço ``||logic:se-então-senão||``. As 
-estruturas de condição lógica podem ser achadas na aba ``||logic:Lógica||``. A primeira 
-condição será ``||logic:receivedNumber = 0||``, e a segunda será 
-``||logic:receivedNumber = 1||``. Para pegar a ``||radio:receivedNumber||``, podemos 
-arrastá-la do bloco 
-``||radio:ao receber rádio receivedNumber||`` para onde quisermos.
+Agora, adicionamos os comparadores lógicos ao laço `||logic:se-então-senão||`.
+Os blocos comparadores podem ser encontrados na aba `||logic:Lógica||`. A primeira
+condição será `||logic:receivedNumber = 0||`, e a segunda será
+`||logic:receivedNumber = 1||`. Para incluir o bloco `||radio:receivedNumber||`,  
+vamos arrastar _(clique sobre ele e mova o mouse)_ a variável `||variables:receivedNumber||` do laço
+`||radio:ao receber rádio receivedNumber||`.
 
 ```blocks
 radio.onReceivedNumber(function (receivedNumber) {
     if (receivedNumber == 0) {
-    	
+
     } else if (receivedNumber == 1) {
-    	
+
     } else {
-    	
+
     }
 })
 ```
 
 ## Step 6
 
-Em seguida, vamos utilizar a estrutura condicional para mostrar o símbolo (ponto, traço 
-ou seta) na tela, de acordo com o número recebido. Se o número recebido for zero, 
-mostraremos o ponto, se for 1, mostraremos o traço, e se não for nenhum dos dois, mostraremos 
-a seta.
+Em seguida, vamos utilizar a estrutura condicional para mostrar o símbolo (**ponto**, **traço**
+ou **seta**) na tela, de acordo com o número recebido. Se o número recebido - `||variables:receivedNumber||` - for igual a **zero**,
+mostraremos o **ponto**, se for igual a **1**, mostraremos o **traço**. Por fim, se não for nenhum dos dois, mostraremos a **seta**.
 
 ```blocks
 radio.onReceivedNumber(function (receivedNumber) {
@@ -152,9 +142,9 @@ radio.onReceivedNumber(function (receivedNumber) {
 
 ## Step 7
 
-Por fim, vamos adicionar um bloco de  ``||basic:pausa||`` e um de ``||basic:limpar tela||`` 
-abaixo do ``||logic:se-então-senão||``, para termos tempo de ver o símbolo na tela, e 
-depois apagar o símbolo, para esperarmos o próximo.
+Finalmente, vamos adicionar um bloco de `||basic:pausa||` e um para `||basic:limpar tela||`
+abaixo do `||logic:se-então-senão||`, para termos tempo de ver o símbolo nos LEDs, e
+depois apagá-lo, para esperarmos o próximo.
 
 ```blocks
 radio.onReceivedNumber(function (receivedNumber) {
@@ -186,23 +176,10 @@ radio.onReceivedNumber(function (receivedNumber) {
     basic.pause(100)
     basic.clearScreen()
 })
-radio.setGroup(1)
+radio.setGroup(255)
 ```
-
-
-
-
 
 ## Step 8
 
-Pronto, agora podemos carregar esse código para dois micro:bits, e nos comunicar 
-via código! E então, consegue ter uma conversa com um amigo só em Código Morse? 
-Não vale trapacear!!
-
-
-
-
-
-
-
-
+Pronto, agora podemos carregar esse programa para os dois micro:bits, e nos comunicar
+via Código Morse! E então, consegue ter uma conversa com um amigo só em Código Morse?

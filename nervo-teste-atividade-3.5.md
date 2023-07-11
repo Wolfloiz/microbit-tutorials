@@ -1,26 +1,24 @@
-
-
 ## Step 1
-Vamos agora fazer um jogo chamado nervo teste. Ele consiste em passar 
-uma argola por um caminho, sem encostar a argola no arame.
 
+Vamos criar um jogo chamado nervo teste para testarmos nossa concentação e coordenação motora.
+Ele consiste em passar uma argola por um arame, sem encostar encostar um no outro durante o trajeto.
 
 ## Step 2
 
-Primeiro, vamos adicionar o bloco  ``||input:no pin ... pressionado||``, que está 
-na aba  ``||input:input||``. Vamos escolher o ``||input:pin 0 (P0)||``.
+Primeiro, vamos adicionar o laço `||input:no pin ... pressionado||`, localizado  
+na aba `||input:input||`. Selecione o `||input:pin 0 (P0)||`.
 
 ```blocks
 input.onPinPressed(TouchPin.P0, function () {
-	
+
 })
 
 ```
 
 ## Step 3
 
-Vamos agora colocar um ícone X, usando o bloco ``||basic:mostrar ícone||``, 
-que pode ser encontrado na aba ``||basic:Básico||``, para mostrar que a 
+Agora, vamos exibir o ícone X, usando o bloco `||basic:mostrar ícone||`,
+que pode ser encontrado na aba `||basic:Básico||`, para informar que a
 argola encostou no arame.
 
 ```blocks
@@ -31,17 +29,10 @@ input.onPinPressed(TouchPin.P0, function () {
 
 ## Step 4
 
-O próximo passo é contar quantas vezes 
-a argola toca no arame, para podermos competir com amigos e ver quem 
-chega ao final com menos falhas.
-
-## Step 5
-
-Para contar quantas vezes a argola toca no arame, vamos criar uma variável 
-chamada ``||variables:Erros||`` dentro da aba ``||variables:Variáveis||``. 
-Ainda dentro da aba ``||variables:Variáveis||`` vamos pegar o bloco 
-``||variables:definir Erros para 0||`` e colocar ele dentro do bloco 
-``||basic:no iniciar||``. 
+O próximo passo é contar quantas vezes a argola toca no arame. Para isso, vamos criar uma variável
+chamada `||variables:Erros||` dentro da aba `||variables:Variáveis||`.
+Ainda nesta aba, selecione o bloco `||variables:definir Erros para 0||` e o posicione dentro do laço
+`||basic:no iniciar||`.
 
 ```blocks
 let Erros = 0
@@ -50,14 +41,12 @@ input.onPinPressed(TouchPin.P0, function () {
 })
 ```
 
-## Step 6
-Agora, dentro do bloco ``||input:no pin ... pressionado||``, vamos colocar o bloco 
-``||variables:alterar Erros por 1||``, que está na aba 
-``||variables:Variáveis||`` 
- para que toda vez que a argola toque  
-no arame, o erro seja contado. Vamos também colocar o bloco 
-``||basic:mostrar número 0||``, logo abaixo.
+## Step 5
 
+Agora, dentro do laço `||input:no pin ... pressionado||`, vamos adicionar o comando
+`||variables:alterar Erros por 1||`, localizado na aba `||variables:Variáveis||`
+para que toda vez que a argola toque no arame, o erro seja contabilizado. Também vamos inserir o bloco
+`||basic:mostrar número 0||`, logo abaixo do anterior, ainda no mesmo laço.
 
 ```blocks
 input.onPinPressed(TouchPin.P0, function () {
@@ -67,11 +56,11 @@ input.onPinPressed(TouchPin.P0, function () {
 })
 ```
 
-## Step 7
+## Step 6
 
-Por fim, vamos pegar o bloco da variável ``||variables:Erros||``, na aba 
-``||variables:Variáveis||``, e colocar ele dentro do bloco 
-``||basic:mostrar número||``, para mostrarmos quantos erros temos até então.
+Em seguida, vamos pegar o bloco da variável `||variables:Erros||`, na aba
+`||variables:Variáveis||`, e colocá-lo dentro do bloco
+`||basic:mostrar número||`, para exibirmos quantos erros temos até então.
 
 ```blocks
 input.onPinPressed(TouchPin.P0, function () {
@@ -81,21 +70,18 @@ input.onPinPressed(TouchPin.P0, function () {
 })
 ```
 
+## Step 7
+
+Só nos resta adicionar um botão para recomeçar o jogo para termos o projeto completo.
+Esse botão deve resetar a quantidade de Erros, para que um novo jogador possa jogar.
+
 ## Step 8
 
-A única coisa que falta agora, é colocar um botão para recomeçar o jogo. 
-Esse botão deve resetar a quantidade de Erros, para um novo jogador poder 
-jogar.
-
-## Step 9
-Na aba ``||input:Input||``, vamos pegar o bloco 
-``||input:no botão ... pressionado||``.
-
-
+Na aba `||input:Input||`, adicione o laço `||input:no botão ... pressionado||` ao programa.
 
 ```blocks
 input.onButtonPressed(Button.A, function () {
-	
+
 })
 input.onPinPressed(TouchPin.P0, function () {
     basic.showIcon(IconNames.No)
@@ -106,12 +92,11 @@ input.onPinPressed(TouchPin.P0, function () {
 Erros = 0
 ```
 
-## Step 10
+## Step 9
 
-Por fim, vamos pegar o bloco ``||variables:definir Erros para 0||`` na aba 
-``||variables:Variáveis||``, e colocar ele dentro do bloco ``||input:no botão ... pressionado||``, para 
-zerar o número de erros toda vez que o botão for apertado.
-
+Por fim, vamos pegar o bloco `||variables:definir Erros para 0||` na aba
+`||variables:Variáveis||`, e colocá-lo dentro do laço `||input:no botão ... pressionado||`, para
+zerar o número de erros toda vez que o botão A for apertado.
 
 ```blocks
 input.onButtonPressed(Button.A, function () {
@@ -126,7 +111,8 @@ input.onPinPressed(TouchPin.P0, function () {
 Erros = 0
 ```
 
-## Step 11
-Pronto! Após carregar o programa para o micro:bit e fazer a montagem dos fios, 
-argola e arame, já podemos jogar! Tente competir com seus colegas e veja quem 
-consegue chegar ao final com menos erros.
+## Step 10
+
+Pronto! Após carregar o programa para o micro:bit e fazer a montagem dos fios,
+argola e arame, já podemos jogar! Agora que temos um botão de reiniciar. Veja quantas
+tentativas você gasta para chegar ao final sem encostar no arame!!

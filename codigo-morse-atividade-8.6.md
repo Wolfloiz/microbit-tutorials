@@ -1,6 +1,3 @@
-
-
-
 ```template
 radio.setGroup(1)
 radio.setTransmitPower(7)
@@ -71,37 +68,30 @@ radio.onReceivedNumber(function (receivedNumber) {
     basic.pause(100)
     basic.clearScreen()
 })
-radio.setGroup(1)
+radio.setGroup(255)
 ```
-
-
-
-
 
 ## Step 1
 
-E se apertarmos um botão errado por acidente? Precisamos avisar a pessoa que estamos 
-comunicando que erramos, e começar a escrever a palavra denovo! Mas como fazemos isso?
-
+E se apertarmos um botão errado por acidente? Precisamos avisar a pessoa que estamos
+nos comunicando que erramos, e então, começar a escrever a palavra novamente! Mas como fazemos isso?
 
 ## Step 2
 
-Da mesma forma que podemos escolher enviar ponto, traço ou próxima palavra, vamos agora 
-enviar uma informação que significa reiniciar palavra. Vamos começar adicionando o bloco 
-``||input:em agitar||``. Toda vez que quisermos reiniciar a palavra, vamos ter que agitar 
-o micro:bit.
+Da mesma forma que podemos escolher enviar um ponto, traço ou próxima palavra, também podemos enviar uma informação que significa reiniciar palavra. Para isso, vamos começar adicionando o laço
+`||input:em agitar||`, localizado na categoria `||input:input||`.
+Assim, sempre que quisermos reiniciar a palavra, vamos precisar agitar o micro:bit.
 
 ```blocks
 input.onGesture(Gesture.Shake, function () {
-	
+
 })
 ```
 
 ## Step 3
 
-Vamos então colocar no bloco ``||input:em agitar||`` os mesmos blocos que estão dentro de 
-``||input:no botão A pressionado||``, podemos fazer isso copiando e colando, para facilitar.
-
+Em seguida, coloque os mesmos blocos que estão dentro de `||input:no botão A pressionado||`, dentro também do laço `||input:em agitar||`.
+Para facilitar, podemos fazer isso copiando e colando todo o laço, ou duplicando os blocos.
 
 ```blocks
 input.onGesture(Gesture.Shake, function () {
@@ -120,10 +110,9 @@ input.onGesture(Gesture.Shake, function () {
 
 ## Step 4
 
-Vamos agora mudar tanto o símbolo mostrado quanto o número enviado ao agitarmos o micro:bit. 
-Dentro do bloco ``||input:em agitar||``, vamos modificar o bloco ``||basic:mostrar leds||`` 
-para mostrar um X. E no bloco ``||radio:rádio envia número 0||``, vamos trocar o número zero 
-pelo número 3.
+Agora, vamos mudar tanto o símbolo exibido, quanto o número enviado ao agitarmos o micro:bit.
+Dentro do laço `||input:em agitar||`, modificamos o bloco `||basic:mostrar leds||`
+para exibir um **X**. Já no bloco `||radio:rádio envia número 0||`, vamos trocar o número **0** pelo número **3**.
 
 ```blocks
 input.onGesture(Gesture.Shake, function () {
@@ -142,14 +131,13 @@ input.onGesture(Gesture.Shake, function () {
 
 ## Step 5
 
-Agora já terminamos a parte de enviar a mensagem de reiniciar palavra. Falta modificar a 
+Assim, já terminamos a parte de enviar a mensagem para reiniciar a palavra. Porém, ainda falta modificar a
 parte de receber essa informação.
-
 
 ## Step 6
 
-No bloco ``||logic:se-então-senão||`` vamos então clicar no símbolo ``||logic:+||`` 
-na extremidade inferior, de modo a acrescentar uma condição.
+No laço `||logic:se-então-senão||` vamos clicar no símbolo `||logic:+||`
+que fica na extremidade inferior do bloco para acrescentar uma condição.
 
 ```blocks
 radio.onReceivedNumber(function (receivedNumber) {
@@ -170,7 +158,7 @@ radio.onReceivedNumber(function (receivedNumber) {
             . . . . .
             `)
     } else if (false) {
-    	
+
     } else {
         basic.showLeds(`
             . . # . .
@@ -187,10 +175,9 @@ radio.onReceivedNumber(function (receivedNumber) {
 
 ## Step 7
 
-No laço novo que acabou de ser criado, vamos colocar a condição 
-``||logic:receivedNumber = 3||``. Por fim, vamos adicionar dentro desse laço o bloco 
-``||basic:mostrar leds||`` e desenhar um X.
-
+Neste laço condicional que acabou de ser criado, vamos incluir a condição
+`||logic:receivedNumber = 3||`. Por fim, dentro do `||logic:então||` desse laço, adicionamos o bloco
+`||basic:mostrar leds||` e desenhamos um **X**.
 
 ```blocks
 radio.onReceivedNumber(function (receivedNumber) {
@@ -232,19 +219,8 @@ radio.onReceivedNumber(function (receivedNumber) {
 })
 ```
 
-
 ## Step 8
 
-Pronto, agora podemos carregar esse código para dois micro:bits, e nos comunicar 
-via código! Se errar, não se esqueça de agitar o micro:bit e recomeçar a palavra.
- E então, consegue ter uma conversa com um amigo só em Código Morse? 
-Não vale trapacear!!
-
-
-
-
-
-
-
-
-
+Pronto, agora podemos carregar esse programa para os dois micro:bits, e nos comunicar
+via Código Morse! E então, consegue ter uma conversa com um amigo só em Código Morse?
+Se errar, não se esqueça de agitar o micro:bit e recomeçar a palavra.

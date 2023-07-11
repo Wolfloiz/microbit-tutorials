@@ -1,12 +1,11 @@
-
-
 ```template
 let funcionando = false
+funcionando = false
 input.onButtonPressed(Button.B, function () {
 		basic.showNumber(3)
 		basic.showNumber(2)
 		basic.showNumber(1)
-		basic.clearScreen(
+		basic.clearScreen()
 		funcionando = false
 		basic.pause(randint(1000, 3000))
 		led.plot(randint(0, 4), randint(0, 4))
@@ -34,39 +33,25 @@ input.onButtonPressed(Button.A, function () {
 })
 ```
 
-
-
 ## Step 1
 
-Vamos incluir agora uma contagem de tempo, para mostrar quão bom é nosso reflexo.
+Nesta atividade, vamos incluir um medidor de tempo para exibir quanto tempo levamos para pressionar
+o botão depois que o LED apareceu.
 
 ## Step 2
 
-Vamos começar criando duas variáveis ``||variables:inicio||`` e ``||variables:fim||``. 
-Adicionaremos então dois blocos ``||variable:definir inicio para 0||`` e
-``||variable:definir fim para 0||`` dentro do bloco ``||basic:no iniciar||``.
-
-
-
-```blocks
-let funcionando = false
-let inicio = 0
-let fim = 0
-```
+Primeiramente, crie as variáveis `||variables:início||` e `||variables:fim||`.
 
 ## Step 3
 
-Agora, dentro do bloco ``||input:no botão B pressionado||``, logo abaixo do bloco 
-``||led:plotar x y||``, vamos adicionar o bloco ``||variable:definir início para 0||``. 
-Vamos então definir ``||variables:inicio||`` como sendo igual ao tempo que o micro:bit está 
-funcionando, usando o bloco ``||input:tempo de execução (ms)||``, que se encontra na aba 
-``||input:Input-> mais||``.
-
+Agora, dentro do laço `||input:no botão B pressionado||` e abaixo do bloco
+`||led:plotar x y||`, adicione o bloco `||variables:definir início para 0||`.
+Em seguida, defina `||variables:início||` como sendo igual ao tempo que o Micro:bit está
+funcionando, usando o bloco `||input:tempo de execução (ms)||`, que se encontra na aba
+`||input:Input-> mais||`.
 
 ```blocks
-let funcionando = false
-let inicio = 0
-let fim = 0
+
 input.onButtonPressed(Button.B, function () {
 		basic.showNumber(3)
 		basic.showNumber(2)
@@ -75,16 +60,17 @@ input.onButtonPressed(Button.B, function () {
 		funcionando = false
 		basic.pause(randint(1000, 3000))
 		led.plot(randint(0, 4), randint(0, 4))
-		inicio = input.runningTime()
+		início = input.runningTime()
 		funcionando = true
 })
 ```
 
 ## Step 4
 
-Agora, dentro do bloco ``||input:no botão A pressionado||``, acima do rosto feliz, 
-iremos repetir o procedimento, mas para a variável ``||variables:fim||``.
-
+Feito isso, dentro do laço `||input:no botão A pressionado||` e acima do rosto feliz,
+repita o procedimento, mas, agora, para a variável `||variables:fim||`. Defina `||variables:fim||` como sendo igual ao tempo que o Micro:bit está
+funcionando, usando o bloco `||input:tempo de execução (ms)||`, que se encontra na aba
+`||input:Input-> mais||`
 
 ```blocks
 input.onButtonPressed(Button.A, function () {
@@ -112,13 +98,9 @@ input.onButtonPressed(Button.A, function () {
 
 ## Step 5
 
-Por fim, vamos usar um bloco ``||basic:mostrar número||``, colocado abaixo do rosto 
-feliz, para mostrar quão rápidos fomos. Vamos colocar nesse bloco a expressão matemática 
-``||math:subtração||`` que pode ser achada na aba ``||math:Matemática||``, e realizar 
-a operação ``||math:fim - inicio||`` (podemos obter as variáveis na aba 
-``||variables:Variáveis||``). Entre o bloco ``||basic:mostrar número||`` e o rosto feliz, 
-vamos também colocar uma pausa de 1 segundo (1000ms).
-
+Em seguida, inclua uma `||basic:pausa||` de um segundo (**1000ms**) depois do **rosto feliz**.
+Então utilize um bloco `||basic:mostrar número||`, para mostrar quanto tempo levamos. O número exibido será uma operação matemática de
+`||math:subtração||`, que pode ser encontrada na aba `||math:Matemática||`.
 
 ```blocks
 input.onButtonPressed(Button.A, function () {
@@ -133,7 +115,7 @@ input.onButtonPressed(Button.A, function () {
             . # # # .
             `)
 				basic.pause(1000)
-        basic.showNumber(fim-inicio)
+        basic.showNumber(0-0)
     } else {
         basic.showLeds(`
             . . . . .
@@ -146,17 +128,76 @@ input.onButtonPressed(Button.A, function () {
 })
 ```
 
-
 ## Step 6
 
-Agora podemos jogar o jogo. Ele está um pouco mais difícil e mais arrumado, e agora 
-podemos recomeçar quantas vezes quisermos apertando o botão B. E então, consegue 
-quantas vezes sem errar?
+Dentro dos campos da operação, preencha com as varíaveis `||math:fim - inicio||`, localizadas na aba `||variables:Variáveis||`.
 
+```blocks
+input.onButtonPressed(Button.A, function () {
+		basic.clearScreen()
+    if (funcionando) {
+				fim = input.runningTime()
+        basic.showLeds(`
+            . . . . .
+            . # . # .
+            . . . . .
+            # . . . #
+            . # # # .
+            `)
+				basic.pause(1000)
+        basic.showNumber(fim-início)
+    } else {
+        basic.showLeds(`
+            . . . . .
+            . # . # .
+            . . . . .
+            . # # # .
+            # . . . #
+            `)
+    }
+})
+```
 
+## Step 7
 
+Agora, já somos capazes de medir quanto tempo levamos para pressionar o `||input:botão A||`
+depois que o LED acendeu. Passe seu código para o Micro:bit e tente reduzir sem tempo de reação!
 
-
-
-
-
+```blocks
+let funcionando = false
+funcionando = false
+input.onButtonPressed(Button.A, function () {
+		basic.clearScreen()
+    if (funcionando) {
+				fim = input.runningTime()
+        basic.showLeds(`
+            . . . . .
+            . # . # .
+            . . . . .
+            # . . . #
+            . # # # .
+            `)
+				basic.pause(1000)
+        basic.showNumber(fim-início)
+    } else {
+        basic.showLeds(`
+            . . . . .
+            . # . # .
+            . . . . .
+            . # # # .
+            # . . . #
+            `)
+    }
+})
+input.onButtonPressed(Button.B, function () {
+		basic.showNumber(3)
+		basic.showNumber(2)
+		basic.showNumber(1)
+		basic.clearScreen()
+		funcionando = false
+		basic.pause(randint(1000, 3000))
+		led.plot(randint(0, 4), randint(0, 4))
+		início = input.runningTime()
+		funcionando = true
+})
+```

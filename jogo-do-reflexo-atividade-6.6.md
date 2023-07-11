@@ -1,4 +1,3 @@
-
 ```template
 let funcionando = false
 let inicio = 0
@@ -44,17 +43,15 @@ input.onPinPressed(TouchPin.P0, function () {
 })
 ```
 
-
-
 ## Step 1
 
-Vamos agora modificar o jogo para podermos competir com um amigo e ver quem tem o reflexo 
+Neste tutorial, vamos modificar o jogo para podermos competir com um amigo e ver quem tem o reflexo
 mais rápido!
 
 ## Step 2
 
-Para incluirmos um segundo jogar, vamos copiar o bloco ``||input:no pin P0 pressionado||`` 
-(com todo seu conteúdo), e mudar o pino de um dos dois para ``||input:P1||``.
+Para incluirmos um segundo jogar, vamos copiar o laço `||input:no pin P0 pressionado||`
+(com todo seu conteúdo), e alterar o pino de um dos laços para `||input:P1||`.
 
 ```blocks
 input.onPinPressed(TouchPin.P0, function () {
@@ -108,13 +105,12 @@ input.onPinPressed(TouchPin.P1, function () {
 })
 ```
 
-
 ## Step 3
-Agora, para podermos visualizar quem teve o reflexo mais rápido e ganhou, vamos ter 
-que modificar os blocos ``||basic:mostrar leds||``. Dentro do bloco 
-``||input:no pin P0 pressionado||`` vamos trocar o rosto feliz por duas retas verticais 
-na esquerda da matriz, e o rosto triste por um pequeno X, também na esquerda da matriz.
 
+Agora, para podermos visualizar quem teve o reflexo mais rápido e venceu, precisaremos
+modificar os blocos `||basic:mostrar leds||` para alterar o que exibem. Dentro do laço `||input:no pin P0 pressionado||`,
+altere o rosto feliz por duas **retas verticais** acesas na esquerda da matriz,
+e o rosto triste por um pequeno **X**, também à esquerda da matriz, indicando que se referem ao jogador daquele lado.
 
 ```blocks
 input.onPinPressed(TouchPin.P0, function () {
@@ -167,11 +163,10 @@ input.onPinPressed(TouchPin.P1, function () {
 })
 ```
 
-## Step 3
-Em seguida, dentro do bloco 
-``||input:no pin P1 pressionado||`` vamos trocar o rosto feliz por duas retas verticais 
-na direita da matriz, e o rosto triste por um pequeno X, também na direita da matriz.
+## Step 4
 
+Em seguida, dentro do laço `||input:no pin P1 pressionado||` faça o mesmo, substituindo o rosto feliz por duas **retas verticais**
+agora na direita da matriz, e o rosto triste por um pequeno **X**, também do lado direito da matriz.
 
 ```blocks
 input.onPinPressed(TouchPin.P0, function () {
@@ -222,21 +217,8 @@ input.onPinPressed(TouchPin.P1, function () {
 				comeco_falso = true
     }
 })
-
-
 ```
 
+## Step 5
 
-
-
-## Step 6
-
-Agora podemos competir com outras pessoas e ver quem tem o reflexo mais rápido!
-
-
-
-
-
-
-
-
+Agora podemos competir com outras pessoas e descobrir quem tem o reflexo mais rápido!
