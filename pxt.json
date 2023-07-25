@@ -40,7 +40,6 @@
         "pedra-papel-tesoura-2.1.md",
         "pedra-papel-tesoura-2.2.md",
         "pedra-papel-tesoura-2.3.md",
-        "custom.ts",
         "pedra-papel-tesoura-2.4.md",
         "pedra-papel-tesoura-2.5.md",
         "_locales/pt-BR/maior-menor-atividade-1.6.md",
@@ -81,7 +80,8 @@
         "codigo-morse-atividade-8.7.md",
         "comunucacao-radio-atividade-9.1.md",
         "fotossintese-1-sensor-de-luz.md",
-        "welcome.md"
+        "welcome.md",
+        "default.md"
     ],
     "testFiles": [
         "test.ts"
