@@ -80,13 +80,14 @@
         "comunucacao-radio-atividade-9.1.md",
         "fotossintese-1-sensor-de-luz.md",
         "welcome.md",
-        "default.md"
+        "default.md",
+        "queda-livre.md"
     ],
     "testFiles": [
         "test.ts"
     ],
     "targetVersions": {
-        "target": "6.0.16",
+        "target": "6.0.17",
         "targetId": "microbit"
     },
     "supportedTargets": [
