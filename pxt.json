@@ -81,13 +81,22 @@
         "fotossintese-1-sensor-de-luz.md",
         "welcome.md",
         "default.md",
-        "queda-livre.md"
+        "queda-livre.md",
+        "termostato-digital-code.md",
+        "luz-automatica.md",
+        "alarme-de-incendio-code.md",
+        "contador-de-palmas-code.md",
+        "quadra-de-basquete-code.md",
+        "estufa-inteligente-code.md",
+        "cancela-code.md",
+        "elevador-2-andares-code.md",
+        "elevador-3-andares.md"
     ],
     "testFiles": [
         "test.ts"
     ],
     "targetVersions": {
-        "target": "6.0.17",
+        "target": "6.0.25",
         "targetId": "microbit"
     },
     "supportedTargets": [
