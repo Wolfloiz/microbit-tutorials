@@ -90,7 +90,8 @@
         "estufa-inteligente-code.md",
         "cancela-code.md",
         "elevador-2-andares-code.md",
-        "elevador-3-andares.md"
+        "elevador-3-andares.md",
+        "gate-code.md"
     ],
     "testFiles": [
         "test.ts"
