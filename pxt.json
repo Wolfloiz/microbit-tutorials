@@ -81,13 +81,14 @@
         "fotossintese-1-sensor-de-luz.md",
         "welcome.md",
         "default.md",
-        "queda-livre.md"
+        "queda-livre.md",
+        "gate.md"
     ],
     "testFiles": [
         "test.ts"
     ],
     "targetVersions": {
-        "target": "6.0.17",
+        "target": "6.0.25",
         "targetId": "microbit"
     },
     "supportedTargets": [
