@@ -91,7 +91,12 @@
         "cancela-code.md",
         "elevador-2-andares-code.md",
         "elevador-3-andares.md",
-        "gate-code.md"
+        "gate-code.md",
+        "broom-robot-code.md",
+        "basic-car-code.md",
+        "functon-car-code.md",
+        "control-car-code.md",
+        "synthesize-code.md"
     ],
     "testFiles": [
         "test.ts"
