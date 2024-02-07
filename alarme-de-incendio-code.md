@@ -57,31 +57,29 @@ o alarme deve parar.
 
 ## Step 6
 
-Para incluir essas instruções no código, vá até a aba ``||music:Música||`` e selecione o bloco ``||music:play melody ... until done||``. 
+Para incluir essas instruções no código, vá até a aba ``||music:Música||`` e selecione o bloco ``||music:play tone C Médio for 1 batida until done||``. 
 Coloque esse bloco dentro do laço do ``||logic:se-verdadeiro-então||``.
 
 ```blocks
 basic.forever(function () {
     if (pins.digitalReadPin(DigitalPin.P0) == 0) {
-        music.play(music.stringPlayable("- - - - - - - - ", 120), music.PlaybackMode.UntilDone)
+        music.play(music.tonePlayable(262, music.beat(BeatFraction.Whole)), music.PlaybackMode.UntilDone)
     }
 })
 ```
 ## Step 7
 
-Por fim, clique no símbolo de nota musical **♫** do bloco ``||music:play melody ... until done||``. 
-Nessa janela, é possível definir a melodia que será tocada. Para o alarme, 
-marque todos os blocos da linha mais de cima.
+Neste comando, você pode personalizar como será o som do seu alarme. Para isso, experimente outros
+tons dentro do campo redondo ``||music:tone||``, e teste a duração de cada toque no campo redondo ``||music:1 batida||``. 
 
 ```blocks
 basic.forever(function () {
     if (pins.digitalReadPin(DigitalPin.P0) == 0) {
-        music.play(music.stringPlayable("C5 C5 C5 C5 C5 C5 C5 C5 ", 120), music.PlaybackMode.UntilDone)
+        music.play(music.tonePlayable(370, music.beat(BeatFraction.Eighth)), music.PlaybackMode.UntilDone)
     }
 })
 ```
 
 ## Step 8
 
-Pronto! Seu alarme de incêndio já está funcionando, agora é só testar! Aproveite para testar 
-outras melodias ao alterar os blocos que setão tocados no comando ``||music:play melody ... until done||``.
+Pronto! Seu alarme de incêndio já está funcionando, agora é só testar e se divertir!
