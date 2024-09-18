@@ -96,13 +96,14 @@
         "basic-car-code.md",
         "functon-car-code.md",
         "control-car-code.md",
-        "synthesize-code.md"
+        "synthesize-code.md",
+        "testes.md"
     ],
     "testFiles": [
         "test.ts"
     ],
     "targetVersions": {
-        "target": "6.0.25",
+        "target": "7.0.42",
         "targetId": "microbit"
     },
     "supportedTargets": [
