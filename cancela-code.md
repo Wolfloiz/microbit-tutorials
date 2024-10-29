@@ -234,7 +234,7 @@ basic.forever(function () {
     } else {
         if (pins.analogReadPin(AnalogPin.P2) > 600) {
             pins.analogWritePin(AnalogPin.P12, 512)
-            basic.showNumber(5000)
+            basic.pause(5000)
         }
     }
 })
@@ -255,7 +255,7 @@ basic.forever(function () {
     } else {
         if (pins.analogReadPin(AnalogPin.P2) > 600) {
             pins.analogWritePin(AnalogPin.P12, 512)
-            basic.showNumber(5000)
+            basic.pause(5000)
             pins.analogWritePin(AnalogPin.P12, 0)
         }
     }
@@ -281,7 +281,7 @@ basic.forever(function () {
     } else {
         if (pins.analogReadPin(AnalogPin.P2) > 600) {
             pins.analogWritePin(AnalogPin.P12, 512)
-            basic.showNumber(5000)
+            basic.pause(5000)
             pins.analogWritePin(AnalogPin.P12, 0)
         }
     }
