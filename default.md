@@ -7,3 +7,7 @@ e explorar blocos de todas as categorias. Se quiser aprender mais sobre eles,
 sugerimos acessar as trilhas de aprendizagem no menu de projetos de nossa plataforma.
 
 Clique em feito para começar!
+
+```package
+fuzzyBot=github:FuzzyMakers/pxt-fuzzyMakers
+```
